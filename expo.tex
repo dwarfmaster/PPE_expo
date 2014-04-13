@@ -1,0 +1,92 @@
+\documentclass{beamer}
+
+\usepackage{etex}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[frenchb]{babel}
+% \usepackage{verbatim}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{animate}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepackage{circuitikz}
+\usepackage{tikz-er2}
+\usepackage{setspace}
+\usepackage[raccourcis]{FAST}
+
+\DeclareUnicodeCharacter{00A0}{ }
+
+\NeedsTeXFormat{LaTeX2e}[1999/01/01]
+\renewcommand*{\FASTEspaceColonne}{7em}
+\renewcommand*{\FASTLargeurBoite}{5em}
+\renewcommand*{\FASTInterligne}{0.05em}
+
+% Le thème
+\usetheme{Berkeley}
+
+\title{Transporthor}
+\subtitle{TPE première}
+\author[Luc \and Charles \and Arthur \and Lucas \and Patrice]{Luc Chabassier \and Charles Duhamel \and Arthur Sirech \and\\ Nicolas Rasmont \and Patrice Rey}
+\institute{Lycée Pierre de Fermat}
+
+% Le logo
+\logo{\includegraphics[scale=0.5]{rcs/logo.png}}
+
+% Au début de chaque section
+\AtBeginSection[]{
+	\begin{frame}
+		\frametitle{\textbf{\insertsectionhead}}
+		\framesubtitle{Partie \thesection}
+		\tableofcontents[currentsection,hideothersubsections]
+	\end{frame}
+}
+
+% Au début de chaque sous-section
+\AtBeginSubsection[]{
+	\begin{frame}
+		\frametitle{\textbf{Partie} \thesection-\thesubsection}
+		\begin{block}{Sous-partie \thesubsection}
+			\Large \textbf{\insertsubsectionhead}
+		\end{block}
+	\end{frame}
+}
+
+% Les symboles dans les listes
+\setbeamertemplate{itemize item}[ball]
+\setbeamertemplate{itemize subitem}[triangle]
+\setbeamertemplate{itemize subsubitem}[circle]
+
+% Définit la 'profondeur' des tables des matières
+\setcounter{tocdepth}{2}
+% Active les coins arrondis et l'ombre pour les blocs d'information
+\setbeamertemplate{blocks}[rounded][shadow=true]
+
+\begin{document}
+
+\begin{frame}
+	\maketitle
+\end{frame}
+
+\begin{frame}
+	\frametitle{Introduction.}
+    \begin{center}
+        \includegraphics[width=0.95\linewidth]{rcs/intro.png}
+    \end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Sommaire.}
+	\tableofcontents
+\end{frame}
+
+\section{Mécanique.}
+\input meca.tex
+
+\section{Électrique.}
+\input elec.tex
+
+\section{Aspect Logiciel.}
+\input log.tex
+
+\end{document}
