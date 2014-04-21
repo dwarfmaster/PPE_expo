@@ -1,0 +1,58 @@
+
+\begin{center}
+    \begin{tikzpicture}
+        % L'arduino
+        \draw[blue,thick] (-1,.5) -- (1,.5);
+        \draw[blue,thick] (1,.5) -- (1,-.5);
+        \draw[blue,thick] (1,-.5) -- (-1,-.5);
+        \draw[blue,thick] (-1,-.5) -- (-1,.5);
+        \draw[blue,thick] (0,0) node {\small ARDUINO};
+
+        % La pandaboard
+        \draw[blue,thick] (-1.5,1) -- (-1.5,3);
+        \draw[blue,thick] (-1.5,3) -- (-3.5,3);
+        \draw[blue,thick] (-3.5,3) -- (-3.5,1);
+        \draw[blue,thick] (-3.5,1) -- (-1.5,1);
+        \draw[blue,thick] (-2.5, 2) node {\small PandaBoard};
+        \draw[blue,thick] (-1.5,1.1) -- (-.9,1.1);
+        \draw[blue,thick] (-.9,1.7) node [above] {\small Serial};
+        \draw[blue,thick] (-.9,1.4) node [above] {\small over};
+        \draw[blue,thick] (-.9,1.1) node [above] {\small USB} -- (-.9,.5);
+
+        % La caméra
+        \draw[blue,thick] (-3,1) -- node [right] {\small USB} (-3,0);
+        \draw[blue,thick] (-3.15,0) -- (-2.85,0);
+        \draw[blue,thick] (-2.85,0) -- node [right] {\small Webcam} (-2.85,-.5);
+        \draw[blue,thick] (-2.85,-.5) -- (-3.15,-.5);
+        \draw[blue,thick] (-3.15,-.5) -- (-3.15,0);
+        \draw[blue,thick] (-3.15,-.5) -- (-3.25,-.75);
+        \draw[blue,thick] (-3.25,-.75) -- (-2.75,-.75);
+        \draw[blue,thick] (-2.75,-.75) -- (-2.85,-.5);
+
+        % Les moteurs
+        \draw (1.5,1) -- (1.5,3);
+        \draw (1.5,3) -- (3.5,3);
+        \draw (3.5,3) -- (3.5,1);
+        \draw (3.5,1) -- (1.5,1);
+        \draw (2.5, 2) node {\small Moteurs};
+        \draw (1.5,1.1) -- (.9,1.1);
+        \draw (.9,1.1) node [above] {\small Fils} -- (.9,.5);
+
+        % Le shield BT
+        \draw[blue,thick] (-1,-.9) -- (1,-.9);
+        \draw[blue,thick] (1,-.9) -- (1,-1.3);
+        \draw[blue,thick] (1,-1.3) -- (-1,-1.3);
+        \draw[blue,thick] (-1,-1.3) -- (-1,-.9);
+        \draw[blue,thick] (0,-1.1) node {\small Shield BT};
+        \draw[blue,thick] (0,-0.5) -- node [right] {\small Serial filaire} (0,-0.9);
+
+        % Le smartphone
+        \draw[blue,thick] (-1.3,-1.7) -- (1.3,-1.7);
+        \draw[blue,thick] (1.3,-1.7) -- (1.3,-2.5);
+        \draw[blue,thick] (1.3,-2.5) -- (-1.3,-2.5);
+        \draw[blue,thick] (-1.3,-2.5) -- (-1.3,-1.7);
+        \draw[blue,thick] (0,-2.1) node {\small Smartphone};
+        \draw[dotted,blue,thick] (0,-1.3) -- node [right] {\small BlueTooth} (0,-1.7);
+    \end{tikzpicture}
+\end{center}
+
