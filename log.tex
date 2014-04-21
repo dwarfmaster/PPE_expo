@@ -207,16 +207,34 @@
                 \textbf{Caméra} & \textbf{Résultat} \\
                 \includegraphics[width=0.4\linewidth]{rcs/abodv0s.png} & \includegraphics[width=0.4\linewidth]{rcs/abodv0r.png} \\
             \end{tabular}
+            \begin{block}{Détails}
+                \begin{itemize}
+                    \item Indique $75\%$ de sol alors qu'il y en a $76.5\%$ : $1.7\%$  du sol est annoncé comme obstacle.
+                    \item Indique $25\%$ d'obstacles alors qu'il y en a $23.5\%$ : $0.1\%$ des obstacles sont anoncés comme faisant partie du sol.
+                \end{itemize}
+            \end{block}
         } \only<2> {
             \begin{tabular}{cc}
                 \textbf{Caméra} & \textbf{Résultat} \\
                 \includegraphics[width=0.4\linewidth]{rcs/abodv1s.png} & \includegraphics[width=0.4\linewidth]{rcs/abodv1r.png} \\
             \end{tabular}
+            \begin{block}{Détails}
+                \begin{itemize}
+                    \item Indique $73\%$ de sol alors qu'il y en a $74.4\%$ : $1.7\%$  du sol est annoncé comme obstacle.
+                    \item Indique $27\%$ d'obstacles alors qu'il y en a $25.6\%$ : tous les obstacles sont anoncés comme tel.
+                \end{itemize}
+            \end{block}
         } \only<3> {
             \begin{tabular}{cc}
                 \textbf{Caméra} & \textbf{Résultat} \\
                 \includegraphics[width=0.4\linewidth]{rcs/abodv2s.png} & \includegraphics[width=0.4\linewidth]{rcs/abodv2r.png} \\
             \end{tabular}
+            \begin{block}{Détails}
+                \begin{itemize}
+                    \item Indique $74.1\%$ de sol alors qu'il y en a $75.1\%$ : tout le sol est annoncé comme tel.
+                    \item Indique $25.9\%$ d'obstacles alors qu'il y en a $24.9\%$ : $1.2\%$ des obstacles sont anoncés comme faisant partie du sol.
+                \end{itemize}
+            \end{block}
         }
     \end{center}
 \end{frame}
@@ -224,6 +242,30 @@
 \begin{frame}
     \frametitle{Approche \emph{ABOD}.}
     \framesubtitle{Résultats.}
-    % TODO
+    \begin{center}
+        \only<1> {
+            \begin{tabular}{cc}
+                \textbf{Caméra} & \textbf{Résultat} \\
+                \includegraphics[width=0.4\linewidth]{rcs/abodr0s.png} & \includegraphics[width=0.4\linewidth]{rcs/abodr0r.png} \\
+            \end{tabular}
+            \begin{block}{Détails}
+                \begin{itemize}
+                    \item Indique $82\%$ de sol alors qu'il y en a $62.6\%$ : tout le sol est annoncé comme tel.
+                    \item Indique $18\%$ d'obstacles alors qu'il y en a $37.4\%$ : $51.8\%$ des obstacles sont anoncés comme faisant partie du sol.
+                \end{itemize}
+            \end{block}
+        } \only<2> {
+            \begin{tabular}{cc}
+                \textbf{Caméra} & \textbf{Résultat} \\
+                \includegraphics[width=0.4\linewidth]{rcs/abodr1s.png} & \includegraphics[width=0.4\linewidth]{rcs/abodr1r.png} \\
+            \end{tabular}
+            \begin{block}{Détails}
+                \begin{itemize}
+                    \item Indique $78.3\%$ de sol alors qu'il y en a $63.4\%$ : $0.7\%$  du sol est annoncé comme obstacle.
+                    \item Indique $21.7\%$ d'obstacles alors qu'il y en a $36.6\%$ : $41.9\%$ des obstacles sont anoncés comme faisant partie du sol.
+                \end{itemize}
+            \end{block}
+        }
+    \end{center}
 \end{frame}
 
