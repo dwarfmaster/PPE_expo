@@ -124,5 +124,106 @@
     \end{block} }
 \end{frame}
 
+\begin{frame}
+    \frametitle{Utilisation d'une caméra.}
+    \begin{tabular}{cc}
+        \includegraphics[width=.4\linewidth]{rcs/follow_bef.png} & \includegraphics[width=.4\linewidth]{rcs/follow_aft.png} \\
+    \end{tabular}
+    \only<2-> { \begin{alertblock}{Limites}
+            \begin{itemize}
+                \pause \item L'utilisateur doit être dans le champ de vision du robot.
+                \pause \item Il doit porter une couleur particulière.
+                \pause \item Relativement sensible à l'éclairage.
+                \pause \item Si la couleur est présente ailleurs sur le décor, le robot va être désorienté.
+            \end{itemize}
+    \end{alertblock} }
+\end{frame}
+
+\begin{frame}
+    \frametitle{Espace de couleur \emph{HSV}.}
+    \begin{center}
+        \includegraphics[width=.8\linewidth]{rcs/hsv.png}
+    \end{center}
+\end{frame}
+
 \subsection[Obstacles]{Détection des obstacles.}
+\begin{frame}
+    \frametitle{Stéréovision.}
+    \framesubtitle{Principe.}
+    \begin{tabular}{cc}
+        \includegraphics[width=.4\linewidth]{rcs/tsukuba.png} & \includegraphics[width=.4\linewidth]{rcs/tsukuba_disp.png} \\
+    \end{tabular}
+    \only<2-3> { \begin{exampleblock}{Avantages}
+            \begin{itemize}
+                \pause \item Détecte tous les obstacles dans le champ de vision de la caméra.
+                \pause \item Efficace contre les obstacles de type \emph{coin de table}.
+            \end{itemize}
+    \end{exampleblock} }
+    \only<4-> { \begin{alertblock}{Limites}
+            \begin{itemize}
+                \pause \item Calculatoire et complexe.
+                \pause \item Nécessite une unité de calcul puissante : coût élevé.
+            \end{itemize}
+    \end{alertblock} }
+\end{frame}
+
+\begin{frame}
+    \frametitle{Stéréovision.}
+    \framesubtitle{Résultats.}
+    \begin{tabular}{ccc}
+        \textbf{Caméra gauche} & \textbf{Caméra droite} & \textbf{Carte de disparité} \\
+        \includegraphics[width=0.3\linewidth]{rcs/rem0l.png} & \includegraphics[width=0.3\linewidth]{rcs/rem0r.png} & \includegraphics[width=0.3\linewidth]{rcs/disp0.png} \\
+        \includegraphics[width=0.3\linewidth]{rcs/rem1l.png} & \includegraphics[width=0.3\linewidth]{rcs/rem1r.png} & \includegraphics[width=0.3\linewidth]{rcs/disp1.png} \\
+        \includegraphics[width=0.3\linewidth]{rcs/rem2l.png} & \includegraphics[width=0.3\linewidth]{rcs/rem2r.png} & \includegraphics[width=0.3\linewidth]{rcs/disp2.png} \\
+    \end{tabular}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Approche \emph{ABOD}.}
+    \framesubtitle{Principe.}
+    \only<1> {
+        \begin{center}
+            \includegraphics[width=0.8\linewidth]{rcs/abod.png}
+        \end{center}
+    }
+    \only<2-> {
+        \begin{alertblock}{Limites}
+            \begin{itemize}
+                \pause \item Le sol doit être globalement uni et différent des obstacles.
+                \pause \item Inefficace contre les obstacles de type \emph{coin de table}.
+                \pause \item Sans être aussi calculatoire que la stéréovision, nécessite une unité de calcul puissante.
+                \pause \item A une période d'apprentissage : ne peut pas fonctionner dans un environnement inconnu.
+            \end{itemize}
+        \end{alertblock}
+    }
+\end{frame}
+
+\begin{frame}
+    \frametitle{Approche \emph{ABOD}.}
+    \framesubtitle{Simulation.}
+    \begin{center}
+        \only<1> {
+            \begin{tabular}{cc}
+                \textbf{Caméra} & \textbf{Résultat} \\
+                \includegraphics[width=0.4\linewidth]{rcs/abodv0s.png} & \includegraphics[width=0.4\linewidth]{rcs/abodv0r.png} \\
+            \end{tabular}
+        } \only<2> {
+            \begin{tabular}{cc}
+                \textbf{Caméra} & \textbf{Résultat} \\
+                \includegraphics[width=0.4\linewidth]{rcs/abodv1s.png} & \includegraphics[width=0.4\linewidth]{rcs/abodv1r.png} \\
+            \end{tabular}
+        } \only<3> {
+            \begin{tabular}{cc}
+                \textbf{Caméra} & \textbf{Résultat} \\
+                \includegraphics[width=0.4\linewidth]{rcs/abodv2s.png} & \includegraphics[width=0.4\linewidth]{rcs/abodv2r.png} \\
+            \end{tabular}
+        }
+    \end{center}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Approche \emph{ABOD}.}
+    \framesubtitle{Résultats.}
+    % TODO
+\end{frame}
 
