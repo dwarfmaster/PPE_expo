@@ -1,0 +1,11 @@
+*.pdf
+*.ps
+*.dvi
+*.log
+*.lof
+*.aux
+*.out
+*.toc
+*.nav
+*.snm
+
